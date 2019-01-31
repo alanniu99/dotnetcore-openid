@@ -9,10 +9,10 @@ trigger:
     - HELP.md
 
 jobs:
-- template: Templates/build-publish-dotnetcore.yml
+- template: ../Templates/build-publish-dotnetcore.yml
   parameters:
     name: BuildWebApp
-    project: '**/TodoListWebApp/*.csproj'
+    project: '*.csproj'
     buildConfiguration: Debug
-    artifactName: TodoList.WebApp
+    artifactName: TodoList.Service
     vmImage: 'vs2017-win2016'
